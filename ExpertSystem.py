@@ -2378,11 +2378,12 @@ class Ui_inference(object):
            self.edit_rule.setVisible(False)
            self.save_edited_rule.setEnabled(False)
            self.save_edited_rule.setVisible(False)
+           self.create_piechart(not_sorted_output)
            if exact_output == None:
               self.result_label.setText(top_strategy)
            else:
                self.result_label.setText(exact_output)
-        self.create_piechart(not_sorted_output)
+
 
     def create_piechart(self, not_sorted_output):
         labels = 'Sobat', 'Nofouz Kahesh', 'Toseh Mahsoul', 'Enhelal', 'Afzayesh', \

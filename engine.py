@@ -238,7 +238,7 @@ class Inference:
             msg.setText('اطلاعات ورودی صحیح نمیباشد لطفا در ارائه اطلاعات دقت فرمایید')
             msg.setWindowTitle("خطا در ورودی")
             retval = msg.exec_()
-            return None, None, None
+            return None, None, None, None
 
     def insert_new_rule(self, sales_income, target_sales,
                          sales_rate, visitor_num,
@@ -277,7 +277,7 @@ class Inference:
             msg.setText('اطلاعات ورودی صحیح نمیباشد لطفا در ارائه اطلاعات دقت فرمایید')
             msg.setWindowTitle("خطا در ورودی")
             retval = msg.exec_()
-            return None, None, None
+            return None
 
 
     def edit_rule(self, sales_income, target_sales,
