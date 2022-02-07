@@ -45,7 +45,7 @@ bdist_dmg_options = {
     "volume_label": "TEST",
 }
 
-executables = [Executable("mainwindow.py", base=base, target_name="test_pyqt5")]
+executables = [Executable("ExpertSystem.py", base=base, target_name="test_pyqt5")]
 
 setup(
 
@@ -58,5 +58,4 @@ setup(
         "bdist_dmg": bdist_dmg_options,
     },
     executables=executables,
-    data_files = [('sqldrivers', ('lib\sqlite3\database.db',))]
 )

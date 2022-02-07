@@ -33,6 +33,9 @@ class Ui_inference(object):
         self.label_11.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_11.setText("")
         self.label_11.setObjectName("label_11")
+        self.pixmap_ = QPixmap(r'1534665706561.jpg')
+        self.label_11.setPixmap(self.pixmap_)
+        self.label_11.setAlignment(Qt.AlignCenter)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.DiagCrossPattern)
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -2407,10 +2410,9 @@ class Ui_inference(object):
         ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
                     shadow=True, startangle=90)
         ax1.axis('equal')
-        plt.savefig('diagram.png')
+        plt.savefig(r'diagram.png')
         pixmap = QPixmap(r'diagram.png')
         self.label_11.setPixmap(pixmap)
-
         self.label_11.adjustSize()
         # self.chart.setScene(scene)
 

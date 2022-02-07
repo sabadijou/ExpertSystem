@@ -5,16 +5,16 @@ import pandas as pd
 class Inference:
     def __init__(self):
         super(Inference, self).__init__()
-        self.knowledge_base_path = r'build\exe.win-amd64-3.9\lib\sqlite3\database.db'
+        self.knowledge_base_path = r'database.db'
         self.db = sql.connect(self.knowledge_base_path)
         self.c = self.db.cursor()
-        self.df_con1 = pd.read_csv(r'conditions/inference_table_con1.csv')
-        self.df_con2 = pd.read_csv(r'conditions/inference_table_con2.csv')
-        self.df_con3 = pd.read_csv(r'conditions/inference_table_con3.csv')
-        self.df_con4 = pd.read_csv(r'conditions/inference_table_con4.csv')
-        self.df_con5 = pd.read_csv(r'conditions/inference_table_con5.csv')
-        self.df_con6 = pd.read_csv(r'conditions/inference_table_con6.csv')
-        self.strategies = pd.read_csv(r'conditions/strategies.csv')
+        self.df_con1 = pd.read_csv(r'conditions\inference_table_con1.csv')
+        self.df_con2 = pd.read_csv(r'conditions\inference_table_con2.csv')
+        self.df_con3 = pd.read_csv(r'conditions\inference_table_con3.csv')
+        self.df_con4 = pd.read_csv(r'conditions\inference_table_con4.csv')
+        self.df_con5 = pd.read_csv(r'conditions\inference_table_con5.csv')
+        self.df_con6 = pd.read_csv(r'conditions\inference_table_con6.csv')
+        self.strategies = pd.read_csv(r'conditions\strategies.csv')
 
     def combo_parser(self, _choise):
 
